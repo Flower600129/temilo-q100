@@ -1,0 +1,13 @@
+{
+  "source": "https://registry.npmjs.org/decode-uri-component/-/decode-uri-component-0.5.1.tgz",
+  "version": "0.5.1",
+  "upstreamIndexSha256": "6a86ac891edf15c5efa0841ebb31935e3669d58b98318b57d7b08a4530317cb0",
+  "changes": [
+    "ESM default export converted to module.exports",
+    "Retain 0.2.x plus-to-space normalization before both native and fallback paths"
+  ],
+  "advisories": [
+    "GHSA-vcc3-ghjq-m6fr",
+    "GHSA-qr28-fpjm-wq7f"
+  ]
+}

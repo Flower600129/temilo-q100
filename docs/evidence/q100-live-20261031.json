@@ -1,0 +1,531 @@
+{
+  "kind": "Live Qloo responses via the existing server Adapter; not fixtures",
+  "date": "2026-10-31 Asia/Shanghai",
+  "origin": "http://127.0.0.1:8082",
+  "fictionalBrowserData": true,
+  "totalUpstreamRequests": 6,
+  "retries": 0,
+  "cases": [
+    {
+      "input": "Radiohead",
+      "target": "book",
+      "startedAt": "2026-10-30T16:42:56.775Z",
+      "finishedAt": "2026-10-30T16:43:06.391Z",
+      "requests": [
+        {
+          "path": "/api/taste/resolve",
+          "at": "2026-10-30T16:43:04.127Z",
+          "input": {
+            "interests": [
+              "Radiohead"
+            ]
+          },
+          "httpStatus": 200,
+          "response": {
+            "status": "success",
+            "provider": "Qloo",
+            "matches": [
+              {
+                "input": "Radiohead",
+                "result": {
+                  "status": "success",
+                  "provider": "Qloo",
+                  "requestedAt": "2026-10-30T16:43:02.322Z",
+                  "entities": [
+                    {
+                      "entityId": "70CAE5BF-2F4C-445C-A3E5-4EDACFC3591C",
+                      "name": "Radiohead",
+                      "entityType": "urn:entity:artist"
+                    },
+                    {
+                      "entityId": "70CAE5BF-2F4C-445C-A3E5-4EDACFC3591C",
+                      "name": "Radiohead",
+                      "entityType": "urn:entity:person"
+                    },
+                    {
+                      "entityId": "B48A4E4B-5448-44CB-A2BE-58108E3C26A2",
+                      "name": "Radiohead",
+                      "entityType": "urn:entity:album"
+                    },
+                    {
+                      "entityId": "1B71B1D7-E72E-45F2-95C1-ACEE0D87BDD4",
+                      "name": "Radiohead",
+                      "entityType": "urn:entity:person"
+                    },
+                    {
+                      "entityId": "3C3A5184-433C-4472-8CDA-6B6B815A568C",
+                      "name": "Radiohead: In Rainbows - From the Basement",
+                      "entityType": "urn:entity:movie"
+                    }
+                  ],
+                  "warnings": []
+                }
+              }
+            ],
+            "unresolved": []
+          }
+        },
+        {
+          "path": "/api/taste/explore",
+          "at": "2026-10-30T16:43:05.197Z",
+          "input": {
+            "entityIds": [
+              "70CAE5BF-2F4C-445C-A3E5-4EDACFC3591C"
+            ],
+            "targetCategory": "urn:entity:book"
+          },
+          "httpStatus": 200,
+          "response": {
+            "status": "success",
+            "provider": "Qloo",
+            "requestedAt": "2026-10-30T16:43:04.376Z",
+            "entities": [
+              {
+                "entityId": "D3436CAD-ACE1-4C5A-B0B8-50B6E1B62ACE",
+                "name": "Paul McCartney: The Life",
+                "entityType": "urn:entity:book",
+                "score": 0.9099703583231442,
+                "scoreField": "query.affinity",
+                "explainability": {
+                  "signal.interests.entities": [
+                    {
+                      "entity_id": "70CAE5BF-2F4C-445C-A3E5-4EDACFC3591C",
+                      "score": 1
+                    }
+                  ]
+                }
+              },
+              {
+                "entityId": "37002388-766F-4BEB-B3C7-AC9FE96F293B",
+                "name": "John Lennon 1980: The Last Days in the Life",
+                "entityType": "urn:entity:book",
+                "score": 0.9062158774746404,
+                "scoreField": "query.affinity",
+                "explainability": {
+                  "signal.interests.entities": [
+                    {
+                      "entity_id": "70CAE5BF-2F4C-445C-A3E5-4EDACFC3591C",
+                      "score": 1
+                    }
+                  ]
+                }
+              },
+              {
+                "entityId": "193D088A-5911-4CF5-AEC5-4D43E204EF0E",
+                "name": "The John Lennon Letters",
+                "entityType": "urn:entity:book",
+                "score": 0.9033121537322347,
+                "scoreField": "query.affinity",
+                "explainability": {
+                  "signal.interests.entities": [
+                    {
+                      "entity_id": "70CAE5BF-2F4C-445C-A3E5-4EDACFC3591C",
+                      "score": 1
+                    }
+                  ]
+                }
+              },
+              {
+                "entityId": "6DACF6E3-B4C4-41C4-8DD1-4CCDF323DED7",
+                "name": "Tune In (The Beatles: All These Years, #1)",
+                "entityType": "urn:entity:book",
+                "score": 0.8980347283279381,
+                "scoreField": "query.affinity",
+                "explainability": {
+                  "signal.interests.entities": [
+                    {
+                      "entity_id": "70CAE5BF-2F4C-445C-A3E5-4EDACFC3591C",
+                      "score": 1
+                    }
+                  ]
+                }
+              },
+              {
+                "entityId": "0279219C-2A8F-4430-A42C-3CE9BA01A57A",
+                "name": "Lennon: The Man, the Myth, the Music - The Definitive Life",
+                "entityType": "urn:entity:book",
+                "score": 0.8978967630575229,
+                "scoreField": "query.affinity",
+                "explainability": {
+                  "signal.interests.entities": [
+                    {
+                      "entity_id": "70CAE5BF-2F4C-445C-A3E5-4EDACFC3591C",
+                      "score": 1
+                    }
+                  ]
+                }
+              }
+            ],
+            "warnings": []
+          }
+        }
+      ],
+      "confirmedEntity": {
+        "entityId": "70CAE5BF-2F4C-445C-A3E5-4EDACFC3591C",
+        "name": "Radiohead",
+        "entityType": "urn:entity:artist"
+      },
+      "uiClosure": true,
+      "steps": [
+        "resolve",
+        "explicit entity confirmation",
+        "cross-domain explore",
+        "adopt direction",
+        "save plan",
+        "confirm given",
+        "reload",
+        "source evidence trace"
+      ],
+      "requestCount": 2,
+      "upstreamRequests": 2
+    },
+    {
+      "input": "Studio Ghibli",
+      "target": "book",
+      "startedAt": "2026-10-30T16:43:28.528Z",
+      "finishedAt": "2026-10-30T16:43:33.704Z",
+      "requests": [
+        {
+          "path": "/api/taste/resolve",
+          "at": "2026-10-30T16:43:31.810Z",
+          "input": {
+            "interests": [
+              "Studio Ghibli"
+            ]
+          },
+          "httpStatus": 200,
+          "response": {
+            "status": "success",
+            "provider": "Qloo",
+            "matches": [
+              {
+                "input": "Studio Ghibli",
+                "result": {
+                  "status": "success",
+                  "provider": "Qloo",
+                  "requestedAt": "2026-10-30T16:43:30.371Z",
+                  "entities": [
+                    {
+                      "entityId": "D1222FA1-A6FD-45DE-8993-D89E2BB4777A",
+                      "name": "Studio Ghibli",
+                      "entityType": "urn:entity:artist"
+                    },
+                    {
+                      "entityId": "8714FD40-3CC2-4BB6-842A-460ABA6C40FD",
+                      "name": "Studio Ghibli",
+                      "entityType": "urn:entity:author"
+                    },
+                    {
+                      "entityId": "1CBA43CF-C51A-4312-B27F-1CC630EB951F",
+                      "name": "Studio Ghibli Songs",
+                      "entityType": "urn:entity:album"
+                    },
+                    {
+                      "entityId": "23855C48-793A-4F94-8212-535D3C1E57A1",
+                      "name": "Studio Ghibli Classics for Piano: played by daigoro789",
+                      "entityType": "urn:entity:album"
+                    },
+                    {
+                      "entityId": "0445D119-EC82-43F5-9738-0A710C4F3E1A",
+                      "name": "Studio Ghibli Songs",
+                      "entityType": "urn:entity:album"
+                    }
+                  ],
+                  "warnings": []
+                }
+              }
+            ],
+            "unresolved": []
+          }
+        },
+        {
+          "path": "/api/taste/explore",
+          "at": "2026-10-30T16:43:32.639Z",
+          "input": {
+            "entityIds": [
+              "D1222FA1-A6FD-45DE-8993-D89E2BB4777A"
+            ],
+            "targetCategory": "urn:entity:book"
+          },
+          "httpStatus": 200,
+          "response": {
+            "status": "success",
+            "provider": "Qloo",
+            "requestedAt": "2026-10-30T16:43:31.953Z",
+            "entities": [
+              {
+                "entityId": "BB0C908F-797C-4D65-B8B9-F8F9003790A4",
+                "name": "My Brother's Husband, All Volumes (Otouto no Otto, #1-4)",
+                "entityType": "urn:entity:book",
+                "score": 0.9226807918973784,
+                "scoreField": "query.affinity",
+                "explainability": {
+                  "signal.interests.entities": [
+                    {
+                      "entity_id": "D1222FA1-A6FD-45DE-8993-D89E2BB4777A",
+                      "score": 1
+                    }
+                  ]
+                }
+              },
+              {
+                "entityId": "6DB0E3E3-F711-4869-B7DD-226D783697DF",
+                "name": "Don't Go Without Me",
+                "entityType": "urn:entity:book",
+                "score": 0.8682345900135493,
+                "scoreField": "query.affinity",
+                "explainability": {
+                  "signal.interests.entities": [
+                    {
+                      "entity_id": "D1222FA1-A6FD-45DE-8993-D89E2BB4777A",
+                      "score": 1
+                    }
+                  ]
+                }
+              },
+              {
+                "entityId": "BD67433D-CB28-4D0B-A0E0-58C2A2F000E0",
+                "name": "Squire",
+                "entityType": "urn:entity:book",
+                "score": 0.8666604726187556,
+                "scoreField": "query.affinity",
+                "explainability": {
+                  "signal.interests.entities": [
+                    {
+                      "entity_id": "D1222FA1-A6FD-45DE-8993-D89E2BB4777A",
+                      "score": 1
+                    }
+                  ]
+                }
+              },
+              {
+                "entityId": "A3984BA6-6AD3-463D-A8A6-75C1692670FC",
+                "name": "Cyclopedia Exotica",
+                "entityType": "urn:entity:book",
+                "score": 0.8571097411191098,
+                "scoreField": "query.affinity",
+                "explainability": {
+                  "signal.interests.entities": [
+                    {
+                      "entity_id": "D1222FA1-A6FD-45DE-8993-D89E2BB4777A",
+                      "score": 1
+                    }
+                  ]
+                }
+              },
+              {
+                "entityId": "02E5A585-9CCF-4496-AA32-BECC75937857",
+                "name": "Maestros",
+                "entityType": "urn:entity:book",
+                "score": 0.8567634990381368,
+                "scoreField": "query.affinity",
+                "explainability": {
+                  "signal.interests.entities": [
+                    {
+                      "entity_id": "D1222FA1-A6FD-45DE-8993-D89E2BB4777A",
+                      "score": 1
+                    }
+                  ]
+                }
+              }
+            ],
+            "warnings": []
+          }
+        }
+      ],
+      "confirmedEntity": {
+        "entityId": "D1222FA1-A6FD-45DE-8993-D89E2BB4777A",
+        "name": "Studio Ghibli",
+        "entityType": "urn:entity:artist"
+      },
+      "uiClosure": true,
+      "steps": [
+        "resolve",
+        "explicit entity confirmation",
+        "cross-domain explore",
+        "adopt direction",
+        "save plan",
+        "confirm given",
+        "reload",
+        "source evidence trace"
+      ],
+      "requestCount": 2,
+      "upstreamRequests": 2
+    },
+    {
+      "input": "Jane Austen",
+      "target": "movie",
+      "startedAt": "2026-10-30T16:45:39.478Z",
+      "finishedAt": "2026-10-30T16:53:47.707Z",
+      "requests": [
+        {
+          "path": "/api/taste/resolve",
+          "at": "2026-10-30T16:45:43.491Z",
+          "input": {
+            "interests": [
+              "Jane Austen"
+            ]
+          },
+          "httpStatus": 200,
+          "response": {
+            "status": "success",
+            "provider": "Qloo",
+            "matches": [
+              {
+                "input": "Jane Austen",
+                "result": {
+                  "status": "success",
+                  "provider": "Qloo",
+                  "requestedAt": "2026-10-30T16:45:41.373Z",
+                  "entities": [
+                    {
+                      "entityId": "EE05705D-D020-47FB-B85B-5343E31B1927",
+                      "name": "Jane Austen",
+                      "entityType": "urn:entity:author"
+                    },
+                    {
+                      "entityId": "D6359A9C-F8D8-40CB-AC23-237DEF8B3E4C",
+                      "name": "Jane Austen",
+                      "entityType": "urn:entity:person"
+                    },
+                    {
+                      "entityId": "13D10661-C170-4F6F-AE83-69D47BE6121F",
+                      "name": "Jane Austen's House",
+                      "entityType": "urn:entity:place"
+                    },
+                    {
+                      "entityId": "B9713948-8C14-46A6-9936-62D73B630D25",
+                      "name": "Jane Austen: A Life",
+                      "entityType": "urn:entity:book"
+                    },
+                    {
+                      "entityId": "E9F87E87-D845-434C-8A09-70869672EF68",
+                      "name": "Jane Austen's 8-bit Adventure",
+                      "entityType": "urn:entity:videogame"
+                    }
+                  ],
+                  "warnings": []
+                }
+              }
+            ],
+            "unresolved": []
+          }
+        },
+        {
+          "path": "/api/taste/explore",
+          "at": "2026-10-30T16:53:45.858Z",
+          "input": {
+            "entityIds": [
+              "EE05705D-D020-47FB-B85B-5343E31B1927"
+            ],
+            "targetCategory": "urn:entity:movie"
+          },
+          "httpStatus": 200,
+          "response": {
+            "status": "success",
+            "provider": "Qloo",
+            "requestedAt": "2026-10-30T16:53:45.939Z",
+            "entities": [
+              {
+                "entityId": "F5752520-2352-4553-8AE2-487BFFE1BCE1",
+                "name": "One Day",
+                "entityType": "urn:entity:movie",
+                "score": 0.9391790294204969,
+                "scoreField": "query.affinity",
+                "explainability": {
+                  "signal.interests.entities": [
+                    {
+                      "entity_id": "EE05705D-D020-47FB-B85B-5343E31B1927",
+                      "score": 1
+                    }
+                  ]
+                }
+              },
+              {
+                "entityId": "981CCAAB-1CE0-4CF3-B154-BB2B1D299CAF",
+                "name": "The Edge of Love",
+                "entityType": "urn:entity:movie",
+                "score": 0.9291842014678174,
+                "scoreField": "query.affinity",
+                "explainability": {
+                  "signal.interests.entities": [
+                    {
+                      "entity_id": "EE05705D-D020-47FB-B85B-5343E31B1927",
+                      "score": 1
+                    }
+                  ]
+                }
+              },
+              {
+                "entityId": "CF5EFC42-2154-45B8-9300-42E4D4BC7CD9",
+                "name": "The Greatest",
+                "entityType": "urn:entity:movie",
+                "score": 0.9258661880248836,
+                "scoreField": "query.affinity",
+                "explainability": {
+                  "signal.interests.entities": [
+                    {
+                      "entity_id": "EE05705D-D020-47FB-B85B-5343E31B1927",
+                      "score": 1
+                    }
+                  ]
+                }
+              },
+              {
+                "entityId": "AAC40E13-420B-499E-8726-19E0B76F877F",
+                "name": "Last Night",
+                "entityType": "urn:entity:movie",
+                "score": 0.9235744501026798,
+                "scoreField": "query.affinity",
+                "explainability": {
+                  "signal.interests.entities": [
+                    {
+                      "entity_id": "EE05705D-D020-47FB-B85B-5343E31B1927",
+                      "score": 1
+                    }
+                  ]
+                }
+              },
+              {
+                "entityId": "349A4844-7E56-4306-AD2C-710468F9181C",
+                "name": "Becoming Jane",
+                "entityType": "urn:entity:movie",
+                "score": 0.9223823717938348,
+                "scoreField": "query.affinity",
+                "explainability": {
+                  "signal.interests.entities": [
+                    {
+                      "entity_id": "EE05705D-D020-47FB-B85B-5343E31B1927",
+                      "score": 1
+                    }
+                  ]
+                }
+              }
+            ],
+            "warnings": []
+          }
+        }
+      ],
+      "confirmedEntity": {
+        "entityId": "EE05705D-D020-47FB-B85B-5343E31B1927",
+        "name": "Jane Austen",
+        "entityType": "urn:entity:author"
+      },
+      "uiClosure": false,
+      "steps": [],
+      "initialStop": "Exact cultural entity could not be unambiguously confirmed",
+      "requestCount": 2,
+      "upstreamRequests": 2
+    }
+  ],
+  "qualitativeReview": {
+    "Radiohead": "Plausible broad music-to-book leads. Beatles/Lennon books add real candidates, but do not prove Radiohead-specific taste or personal suitability.",
+    "StudioGhibli": "Weak or uncertain relevance. Qloo labeled the selected exact-name entity artist; returned book titles alone do not establish a film-studio connection. Verify the category interpretation before using this case.",
+    "JaneAusten": "Author category explicitly chosen from the actual prior search. Movie results include Becoming Jane; other titles have unverified relevance. API-only continuation, not a third complete UI closure."
+  },
+  "comparison": {
+    "withoutQloo": "Recorded wish plus matching owned tea set is actionable with known stock and zero external calls.",
+    "withQloo": "Real cross-domain names and evidence provide optional new directions, but introduce entity-interpretation, price, availability and personal-fit unknowns.",
+    "method": "Developer qualitative inspection of three synthetic scenarios; no statistical or user-acceptance claim."
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "name": "decode-uri-component",
+  "version": "0.5.1-temilo.1",
+  "private": true,
+  "description": "Upstream 0.5.1 security fixes with a CommonJS/plus-sign compatibility export",
+  "main": "index.cjs",
+  "license": "MIT"
+}

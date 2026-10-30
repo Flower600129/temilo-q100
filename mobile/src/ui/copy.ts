@@ -1,0 +1,16 @@
+export const copy = {
+  leaveTitle: 'Discard unsaved changes?', leaveDescription: 'Your edits have not been saved. Keep editing, or discard them to leave this page.', discard: 'Discard & leave',
+  saving: 'Saving…', cancel: 'Cancel', back: '← Back', editPerson: 'Edit person', saveChanges: 'Save changes',
+  addPerson: 'Add a person', name: 'Name', relationship: 'Relationship (optional)',
+  interests: 'Cultural interests (optional)', interestsHint: 'Separate works, artists, books or other interests with commas or new lines.',
+  dislikes: 'Avoid (optional)', notes: 'Private notes (optional)',
+  birthday: 'Birthday', month: 'Month', day: 'Day', year: 'Year',
+  addDate: 'Add a date', editDate: 'Edit date', dateLabel: 'Occasion name',
+  annual: 'Every year', once: 'One time', reminders: 'In-app reminder days',
+  remindersHint: 'Comma-separated days before the date, e.g. 14, 7, 1. Leave blank for no early reminders. Shown while the app is open; no push notifications.',
+  leapHint: 'February 29 is observed on February 28 in non-leap years.',
+  deletePerson: 'Delete person', deleteDate: 'Delete date', confirmDelete: 'Confirm deletion',
+  personMissing: 'This person is no longer available in this data space.', dateMissing: 'This date is no longer available.',
+  prepare: 'Prepare a gift', dates: 'Important dates', noDates: 'No dates saved yet.',
+  privateHint: 'Names, exact dates and private notes stay on this device.',
+};

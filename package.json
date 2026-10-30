@@ -1,0 +1,79 @@
+{
+  "name": "gift-memory",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "mobile",
+    "vendor/*"
+  ],
+  "engines": {
+    "node": "^22.12.0 || ^24.0.0 || >=26.0.0"
+  },
+  "scripts": {
+    "dev": "node scripts/start-preview.mjs",
+    "build": "node scripts/check-asset-rights.mjs && npm run export:web --workspace mobile && node scripts/finalize-web-export.mjs",
+    "start": "node scripts/start-preview.mjs --production",
+    "preview:status": "node scripts/preview-status.mjs",
+    "baseline:create": "node scripts/create-source-baseline.mjs",
+    "lint": "npm run lint:shared && npm run lint --workspace mobile",
+    "lint:shared": "eslint .",
+    "typecheck": "tsc --noEmit -p tsconfig.shared.json && npm run typecheck --workspace mobile",
+    "test": "vitest run",
+    "test:e2e": "playwright test --grep @baseline",
+    "test:visual": "playwright test --project mobile --grep @visual",
+    "test:r1": "playwright test --project mobile --grep @r1",
+    "test:r3": "playwright test --project mobile --grep @r3",
+    "legacy:dev": "next dev --hostname 127.0.0.1",
+    "legacy:build": "next build",
+    "legacy:start": "next start --hostname 127.0.0.1",
+    "legacy:typecheck": "next typegen && tsc --noEmit",
+    "legacy:test:e2e": "playwright test --config playwright.legacy.config.ts",
+    "legacy:test:mobile-web": "node scripts/check-mobile-web.mjs",
+    "legacy:test:p1": "node scripts/check-p1-web.mjs",
+    "qloo:spike": "tsx --conditions=react-server scripts/qloo-spike.ts",
+    "check:secrets": "node scripts/check-secrets.mjs",
+    "test:temilo": "playwright test --project mobile --grep @journey",
+    "start:production": "node scripts/serve-production.mjs",
+    "test:r2": "playwright test --project mobile --grep @r2",
+    "test:production": "playwright test --config playwright.production.config.ts",
+    "release:prepare": "node scripts/prepare-release.mjs",
+    "check:assets": "node scripts/check-asset-rights.mjs"
+  },
+  "dependencies": {
+    "idb": "8.0.4",
+    "next": "16.4.3",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "server-only": "0.0.1",
+    "zod": "4.6.7"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.64.1",
+    "@types/node": "26.6.5",
+    "@types/react": "19.1.17",
+    "@types/react-dom": "19.1.0",
+    "eslint": "9.39.5",
+    "eslint-config-next": "16.4.3",
+    "fake-indexeddb": "6.2.6",
+    "react-native": "0.81.5",
+    "react-native-safe-area-context": "5.6.2",
+    "react-native-screens": "4.16.0",
+    "tsx": "4.23.15",
+    "typescript": "6.0.3",
+    "vitest": "5.0.5",
+    "expo-router": "~6.0.24"
+  },
+  "overrides": {
+    "@expo/metro-config": {
+      "postcss": "8.5.31"
+    },
+    "query-string": {
+      "decode-uri-component": "0.5.1-temilo.1"
+    },
+    "metro": {
+      "image-size": "2.0.4-temilo.1"
+    }
+  },
+  "license": "MIT"
+}

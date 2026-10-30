@@ -1,0 +1,16 @@
+node_modules/
+.next/
+out/
+.env*
+!.env.example
+*.tsbuildinfo
+coverage/
+playwright-report/
+test-results/
+.DS_Store
+.local/
+mobile/.expo/
+mobile/dist/
+
+# Expo machine metadata is not portable source.
+.expo/

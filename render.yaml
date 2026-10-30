@@ -1,0 +1,32 @@
+# Proposed paid single-instance service. Apply only after owner approval.
+# Qloo credentials are entered as a private runtime environment variable.
+services:
+  - type: web
+    name: temilo-q100
+    runtime: node
+    region: oregon
+    plan: 0.5c-512mb
+    numInstances: 1
+    autoDeployTrigger: "off"
+    buildCommand: npm ci --include=dev && QLOO_API_KEY= EXPO_NO_DOTENV=1 npm run build
+    startCommand: node scripts/start-render.mjs
+    healthCheckPath: /healthz
+    disk:
+      name: qloo-quota
+      mountPath: /var/data
+      sizeGB: 1
+    envVars:
+      - key: NODE_VERSION
+        value: 24.15.0
+      - key: EXPO_NO_TELEMETRY
+        value: "1"
+      - key: TEMILO_QUOTA_FILE
+        value: /var/data/temilo/qloo-quota.json
+      - key: TEMILO_QLOO_DAILY_UNITS
+        value: "60"
+      - key: TEMILO_QLOO_MINUTE_UNITS
+        value: "12"
+      - key: QLOO_BASE_URL
+        value: https://hackathon.api.qloo.com
+      - key: QLOO_API_KEY
+        sync: false

@@ -1,0 +1,16 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "incremental": false,
+    "types": ["node"],
+    "plugins": []
+  },
+  "include": [
+    "src/domain/**/*.ts",
+    "src/storage/**/*.ts",
+    "src/qloo/**/*.ts",
+    "tests/*.test.ts",
+    "tests/fixtures.ts"
+  ],
+  "exclude": ["node_modules", "mobile", ".local"]
+}
