@@ -1,8 +1,8 @@
-# Production deployment preparation (not deployed)
+# Production deployment preparation (Netlify selected; not deployed)
 
-The current output is **Expo SDK 54 server output**: `mobile/dist/web/client` plus `server`. A static-only upload drops the Qloo API. The prepared topology is **one long-running Node 24 process**, behind HTTPS, with one persistent writable quota file. It can run on a single container/VM host. No hosting account, public domain, billing plan or deployment has been provisioned or tested by this run.
+The current output is **Expo SDK 54 server output**: `mobile/dist/web/client` plus `server`. A static-only upload drops the Qloo API. The selected topology is now [Netlify Functions plus anonymous transactional quota storage](netlify-deployment.md), using the existing Free account; local preparation is verified and cloud initialization/publish remain pending. The following single-process Node24/container topology remains an alternative. No hosting resources were provisioned during preparation.
 
-## Proposed Render release
+## Paused Render alternative
 
 `render.yaml` prepares a paid `0.5c-512mb` Node web service with one 1 GB persistent disk, one instance, manual deploys and `/healthz`. Apply only after the owner approves publication, the hosting account and its actual displayed price. No Render resources have been provisioned by writing this file. Free ephemeral hosting does not preserve the quota ledger.
 

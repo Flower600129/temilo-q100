@@ -9,6 +9,8 @@
     "src/domain/**/*.ts",
     "src/storage/**/*.ts",
     "src/qloo/**/*.ts",
+    "netlify/**/*.ts",
+    "netlify/**/*.mts",
     "tests/*.test.ts",
     "tests/fixtures.ts"
   ],

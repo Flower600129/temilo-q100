@@ -2,7 +2,7 @@
 
 A private, mobile-first gift companion: remember people and dates, keep wishes and personal gift stock, prepare a gift, and record giving or undoing it with consistent stock accounting.
 
-The current application uses **Expo SDK 54 / Expo Router 6 / React Native 0.81.5**. The earlier Next.js application is retained as a frozen legacy baseline with separate storage. Q100 night-run work repaired R3, unified the R2 UI and prepared/tested the local R4 server. **No public demo, public repository or formal competition submission has been created by the run.** The root MIT license names Liuyun. Active artwork has a checked provenance manifest; remaining release gates are listed below.
+The current application uses **Expo SDK 54 / Expo Router 6 / React Native 0.81.5**. The earlier Next.js application is retained as a frozen legacy baseline with separate storage. Q100 night-run work repaired R3, unified the R2 UI and prepared/tested the local R4 server. [Public source](https://github.com/Flower600129/temilo-q100) is available under MIT (Liuyun). **The public Demo and competition submission are still pending.** Active artwork has a checked provenance manifest. See the [Netlify guide](docs/netlify-deployment.md) for hosting preparation and remaining gates.
 
 ## Run locally
 
@@ -50,7 +50,7 @@ For an explicit local live-credential preview, use `--local-env` instead. Do not
 
 The build contains client **and server** output in `mobile/dist/web/`; uploading static HTML alone loses Qloo. `build` finalizes SDK 54's CommonJS API boundary. The legacy SQLite import stays in the eager bundle so its production worker remains self-contained; existing data migration/recovery is preserved.
 
-The prepared [single-process container/host guide](docs/deployment.md) includes HTTPS origin checks, a durable quota volume, conservative daily/minute upstream budgets, a two-request concurrency cap and failure behavior. `Dockerfile` is prepared but unbuilt because Docker is unavailable on this host. There is no public deployment. Do not use this quota design with multiple instances or ephemeral storage.
+The selected [Netlify Functions guide](docs/netlify-deployment.md) preserves the API and browser storage while moving anonymous quota counts to shared transactional SQL. The original [single-process host guide](docs/deployment.md) remains an alternative with a durable quota file; never use that file design with multiple instances or ephemeral storage. `Dockerfile` remains prepared but unbuilt because Docker is unavailable here. Public deployment is pending approval and actual hosting acceptance.
 
 `npm run release:prepare` creates a **private review draft** under `.local/releases/`, with SHA-256 file manifest, excluding secrets, personal databases, debug history, supplied design reference and original briefs. It is not permission to publish. Its root MIT LICENSE and 12-file asset allowlist are included; unused inherited template artwork is excluded. See [third-party notices](docs/third-party-notices.md) and [security triage](docs/security-review-20261031.md).
 
@@ -90,6 +90,6 @@ Current dependency audit remains non-clean: **zero high/moderate/critical, eleve
 
 ## Preservation and source history
 
-`npm run baseline:create` scans source, then copies tracked/unignored source to `.local/baselines/` with hashes; it excludes credentials/dependencies/builds/data. It is not a personal backup, Git commit or public repository. This repository currently has **main with no HEAD/commit**. The night run used verified source snapshots in the original checkout because a managed Worktree cannot be created from a nonexistent HEAD. No author identity was invented.
+`npm run baseline:create` scans source, then copies tracked/unignored source to `.local/baselines/` with hashes; it excludes credentials/dependencies/builds/data. It is not a personal backup or Git commit. The original development checkout had **main with no HEAD/commit**, so the night run used verified source snapshots. The reviewed package was subsequently published in a separate release repository using the owner's approved GitHub identity. The public repository has real commits; the original checkout's history was not rewritten.
 
 The legacy `legacy:*` scripts remain available for the previous Next application. They are not acceptance of the current Expo app. Portable verification and remaining gates are summarized in [release status](docs/release-status.md). The detailed local night report and command ledger are retained privately for the project owner.

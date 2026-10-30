@@ -14,3 +14,4 @@ mobile/dist/
 
 # Expo machine metadata is not portable source.
 .expo/
+.netlify/

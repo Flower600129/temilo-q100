@@ -1,0 +1,10 @@
+import { readFileSync, mkdirSync, writeFileSync } from 'node:fs';
+import { zipFunctions } from '@netlify/zip-it-and-ship-it';
+import { parse } from 'smol-toml';
+const settings = parse(readFileSync('netlify.toml', 'utf8')).functions;
+const config = { nodeBundler: settings.node_bundler, includedFiles: settings.included_files, externalNodeModules: settings.external_node_modules, nodeVersion: '24.x' };
+mkdirSync('.local/q100-netlify', { recursive: true });
+const functions = await zipFunctions('netlify/functions', '.local/q100-netlify/functions', { basePath: process.cwd(), repositoryRoot: process.cwd(), config: { '*': config } });
+const report = functions.map(({ name, path, runtime, bundler, runtimeVersion, routes }) => ({ name, path, runtime, bundler, runtimeVersion, routes }));
+writeFileSync('.local/q100-netlify/bundle-report.json', JSON.stringify({ config, functions: report }, null, 2) + '\n');
+console.log(JSON.stringify({ config, functions: report }));
