@@ -1,6 +1,6 @@
 # Production deployment preparation (Netlify selected; not deployed)
 
-The current output is **Expo SDK 54 server output**: `mobile/dist/web/client` plus `server`. A static-only upload drops the Qloo API. The selected topology is now [Netlify Functions plus anonymous transactional quota storage](netlify-deployment.md), using the existing Free account; local preparation is verified and cloud initialization/publish remain pending. The following single-process Node24/container topology remains an alternative. No hosting resources were provisioned during preparation.
+The current output is **Expo SDK 54 server output**: `mobile/dist/web/client` plus `server`. A static-only upload drops the Qloo API. The selected topology is now [Netlify Functions plus anonymous transactional quota storage](netlify-deployment.md), using the existing Free account; the public release passed cloud initialization, publish and bounded live-Qloo acceptance. The following single-process Node24/container topology remains an alternative. The approved Netlify site is live; Render/container resources remain unprovisioned.
 
 ## Paused Render alternative
 

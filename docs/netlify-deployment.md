@@ -1,6 +1,6 @@
 # TEMILO on Netlify
 
-Status: local preparation; public deployment and hosted/live acceptance pending. Render is paused. Use the existing Flower600129 Free credit-plan team; do not upgrade, buy credits, enable recharge, or replace its three unrelated sites. The owner reported 299.5/300 remaining credits and $0.00 on October 31, 2026. This is an observation, not a reserved budget or future usage guarantee.
+Status: public release live at **https://temilo-q100.netlify.app**. Production deploy `6ae5261ded99e2640df0b621` completed on October31 07:20 Asia/Shanghai. Public core and a separate two-request real Qloo closure passed. Source: https://github.com/Flower600129/temilo-q100. Render is paused. Use the existing Flower600129 Free credit-plan team; do not upgrade, buy credits, enable recharge, or replace its three unrelated sites. The owner reported 299.5/300 remaining credits and $0.00 on October 31, 2026. This is an observation, not a reserved budget or future usage guarantee.
 
 ## Architecture
 
@@ -36,7 +36,7 @@ npm run typecheck
 
 For ZIP acceptance, `package:netlify:test` reads the configured `included_files` and Node24 settings and uses the pinned official packaging library. Then `npm run test:netlify:e2e` extracts `.local/q100-netlify/functions/temilo.zip` to a fresh temporary directory outside the project, invokes its actual entry with a simulated Netlify context, uses an isolated local SQL engine, and opens a new browser context on owned loopback8084. It uses blank credentials and no Qloo network. This is packaging/browser evidence, not hosted acceptance.
 
-CLI27.16.1's standalone `functions:build` was found to omit TOML bundle options; its default ZIP missed Expo CJS files. The documented official `@netlify/zip-it-and-ship-it` API with the actual TOML options is used for the local configured ZIP. Full `netlify build --offline --filter mobile` also failed in DB setup with `Cannot read properties of undefined (reading 'createSiteDatabase')` before a network API exists. No cloud DB was created; do not invent internal API/token workarounds. Real provisioning/migrations remain a hosted acceptance gate.
+CLI27.16.1's standalone `functions:build` was found to omit TOML bundle options; its default ZIP missed Expo CJS files. The documented official `@netlify/zip-it-and-ship-it` API with the actual TOML options is used for the local configured ZIP. Full `netlify build --offline --filter mobile` also failed in DB setup with `Cannot read properties of undefined (reading 'createSiteDatabase')` before a network API exists. No cloud DB was created; do not invent internal API/token workarounds. The subsequent connected production pipeline successfully provisioned the database and applied the migration; actual public resolve/explore requests passed. The offline error remains historical tooling evidence.
 
 ## Approve and publish
 
@@ -46,7 +46,7 @@ Use the repository root as base and the existing `mobile` workspace as the CLI f
 
 Create/link the approved empty project using documented tools/CLI. Let the standard deployment pipeline provision the detected `@netlify/database` dependency and apply the committed `netlify/database/migrations` file. Do not apply DDL through direct SQL or reset hosted data. If provisioning fails, record the exact error/deploy URL and stop that operation; do not extract tokens or invoke internal endpoints.
 
-Set these variables privately, with scope **Functions**, production context:
+Free cannot select per-site Functions scopes (that feature needs Pro); the scoped API attempt returned403 before any key was sent. This release instead uses the official CLI **per-deploy** `--env` and `--secret-env` options, which apply only to the deployed Functions. The Qloo key is secret/masked and never enters build variables. The approved deployment passed without upgrading. Supply all these values to each later production publish; they are not persistent site variables:
 
 | Name | Value |
 | --- | --- |
@@ -56,12 +56,14 @@ Set these variables privately, with scope **Functions**, production context:
 | `TEMILO_QLOO_DAILY_UNITS` | `60` conservative units, or a lower confirmed provider allowance |
 | `TEMILO_QLOO_MINUTE_UNITS` | `12` conservative units |
 
-Use platform-injected database credentials; never commit or log them. Runtime environment changes need a new deployment. Keep public project access enabled for judges only after the approved release. Do not enable continuous deployment while the release is under review. Plan one production publish (15 credits); troubleshoot locally first, not through repeated production deploys. Free credits cover Functions/DB compute and bandwidth; preserve judging availability and monitor remaining shared credits.
+Use platform-injected database credentials; never commit or log them. Runtime environment changes need a new deployment. Public access is enabled for judges. Do not enable continuous deployment while the release is under review. Plan one production publish (15 credits); troubleshoot locally first, not through repeated production deploys. Free credits cover Functions/DB compute and bandwidth; preserve judging availability and monitor remaining shared credits.
 
 ## Public acceptance and handoff
 
 Record actual site/deploy IDs, URL, source commit, build logs and publish time. In a fresh public browser verify routes, navigation, demo isolation, fonts/Worker, direct links/refresh, plan/give/undo/stock and reload persistence. Make at most one Radiohead resolve plus one book explore through the public backend, no automatic retries or private signals; then adopt/save/give/reload/trace the result. Record the real request count, statuses, timing and candid relevance judgment. Local six-call evidence does not substitute for this.
 
-Hosted SQL concurrency/cold-start behavior and active edge limits cannot be established by the single-process local engine. Do not stress-test Qloo to trigger provider throttling. Keep UI/manual gifting available when exploration is unavailable. Leave formal Devpost submission and its receipt to the owner, before October31 11:45 Asia/Shanghai.
+The hosted API succeeded using the shared SQL ledger, but concurrent load/cold-start distributions and edge-limit thresholds were not stress-tested. The single-process local engine does not establish those properties. Do not stress-test Qloo to trigger provider throttling. Keep UI/manual gifting available when exploration is unavailable. Leave formal Devpost submission and its receipt to the owner, before October31 11:45 Asia/Shanghai.
 
 References: [Expo Netlify adapter](https://docs.expo.dev/router/web/api-routes/#netlify), [Netlify Database](https://docs.netlify.com/build/data-and-storage/netlify-database/), [rate limits](https://docs.netlify.com/manage/security/secure-access-to-sites/rate-limiting/), [pricing](https://www.netlify.com/pricing/).
+
+The default optional Powered by Netlify badge intercepted the mobile Friends navigation. It was disabled only for this project using the documented project setting, with no redeploy or plan change. Four actual navigation links were then rechecked.

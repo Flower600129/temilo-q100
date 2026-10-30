@@ -1,6 +1,6 @@
 # TEMILO · local release verification
 
-October 31, 2026, Asia/Shanghai. **Local browser implementation is verified; the project is not yet formally submission-ready.** The [MIT public source repository](https://github.com/Flower600129/temilo-q100) exists. Netlify adaptation is locally verified and awaiting publication approval; the public Demo, hosted live Qloo acceptance and Devpost submission are still pending.
+October 31, 2026, Asia/Shanghai. **Local browser implementation is verified; the project is not yet formally submission-ready.** The [MIT public source repository](https://github.com/Flower600129/temilo-q100) exists. The [public Demo](https://temilo-q100.netlify.app) is deployed and passed core browser and bounded live-Qloo acceptance. Owner visual approval and Devpost submission/receipt are still pending.
 
 | Check | Observed result |
 | --- | --- |
@@ -15,7 +15,8 @@ October 31, 2026, Asia/Shanghai. **Local browser implementation is verified; the
 | Lint / shared and mobile typecheck | Passed, zero lint warnings |
 | Web build | 19 routes, 3 API routes, 2 client/worker bundles; notices included |
 | Fresh secret scan | Source plus the actual new client bundles passed; real configured key checked privately |
-| Finite live Qloo | 6 requests, no retries; two complete UI closures and one API-only combination |
+| Finite live Qloo | Local: 6 requests, two complete UI closures and one API-only combination. Separate public deployment: 2 requests, Radiohead artist → book, full adopt/save/give/reload/source trace. No retries. |
+| Actual public hosting | HTTPS, 8 routes, fonts, give/undo/stock/persistence, origin/type/body rejection and actual public client secret scan passed. Free; one production deploy. |
 
 Initial failures are retained in the private command ledger. In particular, the first production test exposed a real SQLite Worker common-chunk bug; an eager import fixed it without altering migration/recovery or clearing any data. Updated tests select actual radio roles and explicitly handle unsaved-state confirmation; business assertions were retained.
 
@@ -25,9 +26,9 @@ Before formal submission, the project owner still needs to:
 
 1. Inspect the UI personally. Root MIT license (Liuyun) and a hash-checked allowlist of original/permitted active assets are now prepared.
 2. Read the documented low build/configuration risk and choose an adequate real Qloo allowance for judging.
-3. Complete Netlify host/Database initialization, configure HTTPS/Functions secrets, and deploy with human authorization. The original container is an alternative, not a requirement for the selected Functions topology.
-4. Check the real public URL from a fresh external browser/device, including one bounded real Qloo closure. Localhost and blank-key production tests do not satisfy this gate.
-5. Publish the reviewed Netlify source update to the existing open-source repository, fill the actual demo/repository URLs and English submission text, check event eligibility/form requirements, submit before the stated deadline and keep the confirmation.
+3. Hosting, anonymous Database initialization and Functions secrets are configured. Keep the Free credits and conservative Qloo budget available during judging; later deploys must explicitly preserve the per-deploy Functions variables.
+4. Public fresh-browser core and live Qloo closure passed. The owner should now try the real URL on their own device; automatic screenshots are not human approval.
+5. The reviewed source is public. Fill the supplied Demo/source URLs and English submission text, check event eligibility/form requirements, submit before the stated deadline and keep the confirmation.
 
 The original development checkout has no HEAD/commit; verified snapshots preserve its work. The separate release repository has actual approved commits. Public packages exclude credentials, personal data, debug history, supplied reference materials and unverified unused template artwork. See [Netlify hosting preparation](netlify-deployment.md) for the exact topology and remaining cloud initialization gate.
 
